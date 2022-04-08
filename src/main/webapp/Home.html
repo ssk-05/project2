@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Flight search</title>
+<style>
+.container {
+	margin-top: 0;
+	position: relative;
+}
+
+.card {
+	margin-top: 40px;
+	width: 500px;
+	border: 1px solid #ccc;
+	box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.3);
+	position: absolute;
+}
+
+.alignright {
+	float: right;
+}
+
+input {
+	padding: 5px 10px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+button {
+	border-radius: 4px;
+	border: none;
+	height: 30px;
+	display: inline-block;
+	font-size: 15px;
+	margin: 5px;
+}
+</style>
+</head>
+<body>
+	<h3 style="text-align: left">
+		<a href="adminlogin.jsp" style="text-decoration: none; color: black">Admin Login</a>
+	</h3>
+	<div class="head">
+		<h2>Welcome to FlyAway</h2>
+	</div>
+	<div class="container">
+		<div class="card">
+			<h4>Search for flight</h4>
+			<form action="HomePageServlet" method="post">
+				<label for ="origin"><b>Select origin : </b></label><br/> <br>
+				<select name="origin" id="origin">
+ 						 <option value="BENGALURU">BENGALURU</option>
+ 						 <option value="PUNE">PUNE</option>
+  						 <option value="HYDERABAD">HYDERABAD</option>
+ 						 <option value="MUMBAI">MUMBAI</option>
+ 						 <option value="DELHI">DELHI</option>
+ 						 <option value="CHENNAI">CHENNAI</option>
+ 						 <option value="KOLKATA">KOLKATA</option>
+				</select><br><br>
+				<label for="destination"><b>Select Destination : </b></label><br/> <br>
+				<select name="destination" id="destination">
+ 						 <option value="BENGALURU">BENGALURU</option>
+ 						 <option value="PUNE">PUNE</option>
+  						 <option value="HYDERABAD">HYDERABAD</option>
+ 						 <option value="MUMBAI">MUMBAI</option>
+ 						 <option value="DELHI">DELHI</option>
+ 						 <option value="CHENNAI">CHENNAI</option>
+ 						 <option value="KOLKATA">KOLKATA</option>
+				</select><br><br>
+				<label for="start"><b>Date of travel:</b></label><br>
+				<input type="date" name="date" required="required" id="start" value="2022-04-10" min="2022-04-10" max="2022-05-10"><br> 
+				<label><b>No.of persons : </b></label><br /> 
+				<input type="text"  name="totalPerson" required="required"><br> 
+				<button type="submit"><b>Search Flight</b></button><br> 
+			</form>
+		</div>
+	</div>
+	<footer><p>Developed by Sweta K</p></footer>
+</body>
+</html>
